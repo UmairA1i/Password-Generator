@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Password Generator</h1>
+    <p id="password"></p>
+    <form id="passwordForm">
+        <h3>Customize your password</h3>
+        
+        <hr>
+        <br>
+        <label for="length">Password Length: <span id="lengthValue">26</span></label>
+        <input type="range" id="length" min="1" max="60" value="26" oninput="updateLengthValue(this.value)">
+
+        <br><br>
+        <label for="uppercase">Include Uppercase Letters:</label>
+        <input type="checkbox" id="uppercase">
+        <br><br>
+        <label for="lowercase">Include Lowercase Letters:</label>
+        <input type="checkbox" id="lowercase">
+        <br><br>
+        <label for="numbers">Include Numbers:</label>
+        <input type="checkbox" id="numbers">
+        <br><br>
+        <label for="specialCharacters">Include Special Characters:</label>
+        <input type="checkbox" id="specialCharacters">
+        <br><br>
+        <button type="submit" onclick="password(event)">Generate Password</button>
+        <br><br>
+        <button id="copyButton" onclick="copyPassword()">Copy Password</button>
+    </form>
+    
+    <script src="/index.js"></script>
+</body>
+</html>
